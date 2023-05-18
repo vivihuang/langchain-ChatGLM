@@ -155,8 +155,8 @@ class LocalDocQA:
         else:
             from models.chatglm_llm import ChatGLM
             self.llm = ChatGLM()
-        self.llm.load_model(model_name_or_path=llm_model_dict[llm_model],
-                            llm_device=llm_device, use_ptuning_v2=use_ptuning_v2, use_lora=use_lora)
+        # self.llm.load_model(model_name_or_path=llm_model_dict[llm_model],
+        #                     llm_device=llm_device, use_ptuning_v2=use_ptuning_v2, use_lora=use_lora)
         self.llm.history_len = llm_history_len
 
         self.embeddings = HuggingFaceEmbeddings(model_name=embedding_model_dict[embedding_model],
